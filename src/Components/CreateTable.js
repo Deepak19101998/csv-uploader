@@ -8,6 +8,7 @@ function CreateTable(props){
         //console.log(file);
         Papa.parse(file,{
             download:true,
+            worker:true,
             header:false,
             complete:function(results){
                 console.log(results); 
@@ -50,7 +51,7 @@ function CreateTable(props){
 
     return(
         <div>
-            <button id="btn-upload-csv" className="border" onClick={handleClick}>Read CSV</button>
+            <button id="btn-upload-csv" className="btn btn-md btn-outline-danger my-2" onClick={handleClick}>Read CSV</button>
             <table id="tbl-data" className="my-3 border border-dark">
 
             </table>
